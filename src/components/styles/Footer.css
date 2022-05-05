@@ -11,10 +11,15 @@
         margin: 0;
     }
 
+    .middle {
+        position: relative;
+        margin-left: 5%
+    }
+
     .middle p {
         color: #fff;
         text-align: center;
-        margin-top: 5%
+        margin-top: 5%;
     }
 
     .left button {
