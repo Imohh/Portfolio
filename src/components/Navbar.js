@@ -1,14 +1,20 @@
+import { useContext,  } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/Navbar.css"
+import { ThemeContext } from '../context/context'
 
 const Navbar = () => {
     const url = "facebook"
 
+    // DARKMODE
+    const theme = useContext(ThemeContext)
+    const darkMode = theme.state.darkMode
+
     return (
         <>
-            <nav className="navbar navbar-expand-lg ">
+            <nav className="navbar navbar-expand-lg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container">
-                    <a className="navbar-brand" href={url}>Mouri</a>
+                    <a className="navbar-brand" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Mouri</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -16,19 +22,19 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="nav navbar-nav ml-auto">
                             <li className="nav-item active">
-                                <a className="nav-link" href={url}>Home</a>
+                                <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={url}>About</a>
+                                <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>About</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={url}>Portfolio</a>
+                                <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Portfolio</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={url}>Services</a>
+                                <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Services</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={url}>Contact</a>
+                                <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Contact</a>
                             </li>
                         </ul>
                     </div>
