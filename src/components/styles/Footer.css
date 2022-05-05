@@ -28,11 +28,12 @@
     }
 
     .right {
-        display: flex;
-        float: right;
+        position: absolute;
+        right:0
     }
 
     .right button {
+        float: right;
         color: #fff;
         padding: 40px;
         border-right: none;
