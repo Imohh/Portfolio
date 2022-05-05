@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import "./styles/Navbar.css"
 import { ThemeContext } from '../context/context'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
     const url = "facebook"
@@ -39,7 +40,7 @@ const Navbar = () => {
                                     <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Services</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Contact</a>
+                                    <Link to="home-page#section-three">Contact</Link>
                                 </li>
                             </ul>
                         </div>
