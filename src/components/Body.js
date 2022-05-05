@@ -4,6 +4,7 @@ import { reviews, services, portfolios } from '../data'
 import Toggle from "./Toggle"
 // import "animate.css/animate.min.css"
 import { ThemeContext } from '../context/context'
+import Icofont from 'react-icofont';
 // import emailjs from 'emailjs-com'
 
 const Body = () => {
@@ -62,7 +63,7 @@ const Body = () => {
     return (
         <>
              {/* ======= Portfolio Section ======= */}
-             {/* <Toggle /> */}
+             <Toggle />
             <section id="portfolio" className="portfolio section-bg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
 
@@ -176,19 +177,19 @@ const Body = () => {
                         <div className="col-lg-4">
                             <div className="info" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                                 <div className="address">
-                                    <i className="icofont-google-map"></i>
+                                    <Icofont icon="google-map"/>
                                     <h4 style={{color: darkMode ? "#000" :"#fff"}}>Location:</h4>
                                     <p style={{color: darkMode ? "#000" :"#fff"}}>Lagos, Nigeria</p>
                                 </div>
 
                                 <div className="email">
-                                    <i className="icofont-envelope"></i>
+                                    <Icofont icon="envelope" />
                                     <h4 style={{color: darkMode ? "#000" :"#fff"}}>Email:</h4>
                                     <p style={{color: darkMode ? "#000" :"#fff"}}>info@imohcodes.com</p>
                                 </div>
 
                                 <div className="phone">
-                                    <i className="icofont-phone"></i>
+                                    <Icofont icon="phone"/>
                                     <h4 style={{color: darkMode ? "#000" :"#fff"}}>Call:</h4>
                                     <p style={{color: darkMode ? "#000" :"#fff"}}>+234 802 060 0313</p>
                                 </div>
