@@ -1,4 +1,4 @@
-[Live site]((https://www.portfolio-imohh.vercel.app)
+[Live site](https://www.portfolio-imohh.vercel.app)
 
 # Getting Started with Create React App
 
