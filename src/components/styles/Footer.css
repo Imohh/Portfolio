@@ -1,52 +1,85 @@
-.footer-section{
-    background: #000;
-    /* padding-top: 40px;
-    padding-bottom: 40px; */
+@media (min-width: 992px) {
+    .footer-section{
+        background: #000;
+        max-width: 100%
+        /* padding-top: 40px;
+        padding-bottom: 40px; */
+    }
+
+    .footer-section .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .middle p {
+        color: #fff;
+        text-align: center;
+        margin-top: 5%
+    }
+
+    .left button {
+        color: #fff;
+        padding: 40px;
+        background: transparent;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        border-right: 1px solid rgb(63, 62, 62);
+    }
+
+    .right {
+        display: flex;
+        float: right;
+    }
+
+    .right button {
+        color: #fff;
+        padding: 40px;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid rgb(63, 62, 62);
+        background: transparent
+    }
 }
 
-.footer-section .container {
-    padding: 0;
-    margin: 0;
-}
+@media (max-width: 991px) {
+    .footer-section {
+        max-width: 100%;
+        background: #000
+    }
+    .left {
+        display: none;
+    }
 
-.middle p {
-    color: #fff;
-    text-align: center;
-    margin-top: 5%
-}
+    .middle p {
+        color: #fff;
+        text-align: center;
+        margin-top: 5%
+    }
 
-.left button {
-    color: #fff;
-    padding: 40px;
-    background: transparent;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-    border-right: 1px solid rgb(63, 62, 62);
-}
 
-.right {
-    display: flex;
-    float: right;
-}
+    .right {
+        display: none
+    }
+} 
 
-.right button {
-    color: #fff;
-    padding: 40px;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    border-left: 1px solid rgb(63, 62, 62);
-    background: transparent
-}
+@media (max-width: 575px) {
+    .footer-section {
+        margin:0;
+        padding:3%;
+        max-width: 100%;
+        text-align: center;
+        background: #000
+    }
 
-@media (max-width: 992px) {
     .left {
         display: none;
     }
 
     .middle {
-        background: red;
+        width: 100%;
+        color: #fff
     }
 
     .right {

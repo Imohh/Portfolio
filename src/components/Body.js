@@ -1,9 +1,10 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useRef } from 'react'
 import "./styles/Body.css"
 import { reviews, services, portfolios } from '../data'
-import image from "../images/joel.png"
 import Toggle from "./Toggle"
+// import "animate.css/animate.min.css"
 import { ThemeContext } from '../context/context'
+// import emailjs from 'emailjs-com'
 
 const Body = () => {
 
@@ -11,6 +12,7 @@ const Body = () => {
     const [servic, setServic] = useState(services)
     const [portfolio, setPortfolio] = useState(portfolios)
     const {name,job,text,img} = reviews[index]
+    const [done, setDone] = useState(false)
 
 
     const checkNumber = (number) => {
@@ -41,14 +43,27 @@ const Body = () => {
     const theme = useContext(ThemeContext)
     const darkMode = theme.state.darkMode
 
+    const formRef = useRef()
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR TEMPLATE ID', formRef.current, 'YOUR USER ID')
+        // .then(
+        //    (result) => {
+        //     console.log(result.text)
+        //     setDone(true)
+        // }, (error) => {
+        //     console.log(error.text)
+        // }) 
+    }
 
 
     return (
         <>
              {/* ======= Portfolio Section ======= */}
              <Toggle />
-            <section id="portfolio" className="portfolio section-bg" style={{background: darkMode ? "#fff" :"#222"}}>
+            <section id="portfolio" className="portfolio section-bg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
@@ -68,17 +83,17 @@ const Body = () => {
                     
                     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                         {portfolios.map((portfolio) => {
-                        const { id,title,text } = portfolio
+                        const { id,title,text,img } = portfolio
                         return (
                             <div className="col-lg-4 col-md-6 portfolio-item filter-app" key={id}>
                                 <div className="portfolio-wrap">
-                                    <img src={image} className="img-fluid" alt="" />
+                                    <img src={img} className="img-fluid" alt="" />
                                     <div className="portfolio-info">
                                         <h4 style={{color: darkMode ? "#000" :"#fff"}}>{title}</h4>
                                         <p style={{color: darkMode ? "#000" :"#fff"}}>{text}</p>
                                     </div>
                                     <div className="portfolio-links">
-                                        <a href={image} data-gall="portfolioGallery" class="venobox" title="joeladu.com"><i class="bx bx-plus"></i></a>
+                                        <a href={img} data-gall="portfolioGallery" class="venobox" title="joeladu.com"><i class="bx bx-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +104,7 @@ const Body = () => {
             </section> 
 
             {/* ======= Services Section ======= */}
-            <section id="services" className="services" style={{background: darkMode ? "#fff" :"#222"}}>
+            <section id="services" className="services" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
                     <div className="section-title">
                         <h2 style={{color: darkMode ? "#000" :"#fff"}}>Services</h2>
@@ -99,7 +114,7 @@ const Body = () => {
                         {servic.map((service) => {
                             return (
                                 <div className="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" key={service.id}>
-                                    <div className="icon-box iconbox-blue">
+                                    <div className="icon-box iconbox-blue" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                                         <div className="icon">
                                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
@@ -122,7 +137,7 @@ const Body = () => {
 
 
 
-            <section id="testimonials" className="testimonials section-bg" style={{background: darkMode ? "#fff" :"#222"}}>
+            <section id="testimonials" className="testimonials section-bg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
@@ -149,7 +164,7 @@ const Body = () => {
             </section> 
 
             {/* ======= Contact Section ======= */}
-            <section id="contact" className="contact" style={{background: darkMode ? "#fff" :"#222"}}>
+            <section id="contact" className="contact" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
@@ -159,7 +174,7 @@ const Body = () => {
                     <div className="row mt-1">
 
                         <div className="col-lg-4">
-                            <div className="info" style={{background: darkMode ? "#fff" :"#222"}}>
+                            <div className="info" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                                 <div className="address">
                                     <i className="icofont-google-map"></i>
                                     <h4 style={{color: darkMode ? "#000" :"#fff"}}>Location:</h4>
@@ -180,16 +195,20 @@ const Body = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-8 mt-5 mt-lg-0" style={{background: darkMode ? "#fff" :"#222"}}>
+                        <div className="col-lg-8 mt-5 mt-lg-0" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
 
-                            <form novalidate="novalidate" action="" method="post" className="php-email-form" style={{background: darkMode ? "#fff" :"#222"}}>
+                            <form ref={formRef} onSubmit={handleSubmit} novalidate="novalidate" method="post" className="php-email-form" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                                 <div className="row">
                                     <div className="col-md-6 form-group">
-                                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <input type="text" name="user_name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                         <div className="validate"></div>
-                                        </div>
-                                        <div className="col-md-6 form-group mt-3 mt-md-0">
-                                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    </div>
+                                    <div className="col-md-6 form-group mt-3 mt-md-0">
+                                        <input type="email" className="form-control" name="user_email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <div className="validate"></div>
+                                    </div>
+                                    <div className="col-md-12 form-group mt-3 mt-md-0">
+                                        <input type="text" className="form-control" name="user_subject" id="subject" placeholder="Your  Subject" data-rule="subject" data-msg="Please enter your subject" />
                                         <div className="validate"></div>
                                     </div>
                                 </div>
@@ -203,6 +222,7 @@ const Body = () => {
                                     <div className="sent-message" style={{color: darkMode ? "#000" :"#fff"}}>Your message has been sent. Thank you!</div>
                                 </div>
                                 <div className="text-center"><button type="submit" style={{color: darkMode ? "#000" :"#fff"}}>Send Message</button></div>
+                                {done && "Thank You ..."}
                             </form>
                         </div>
                     </div>

@@ -3,14 +3,14 @@ export const reviews = [
         id: 1,
         name: "Joel Adu",
         job: "Head Photographer",
-        img: "https://www.imohcodes.com/assets/img/joel.png",
+        img: "https://www.imohcodes.com/assets/img/joel.jpg",
         text: "Extremely professional and puts out deliverables very timely."
     },
     {
         id: 2,
         name: "Temitope Jalekun",
         job: "Head Photographer at Glintz Photography",
-        img: "https://www.imohcodes.com/assets/img/tpj4.png",
+        img: "https://www.imohcodes.com/assets/img/tpj4.jpg",
         text: "He is an amazing web developer, easy to work with and he gives attention to details."
     }
 ];
@@ -38,25 +38,25 @@ export const portfolios = [
     {
         id: 2,
         title: "Adekunle Adenmosun",
-        img: "https://www.imohcodes.com/assets/img/adekunle.png",
+        img: "https://www.imohcodes.com/assets/img/Screenshot-3.png",
         text: "A portfolio website for the deputy creative director at Insight Publics Nigeria"
     },
     {
         id: 3,
         title: "Ed360",
-        img: "https://www.imohcodes.com/assets/img/ed360.png",
+        img: "https://www.imohcodes.com/assets/img/Screenshot-4.png",
         text: "Tailored to meet the needs of schools in helping them recruite the best teachers for every class"
     },
     {
         id: 4,
         title: "Glintz Photography",
-        img: "https://www.imohcodes.com/assets/img/glintz.png",
+        img: "https://www.imohcodes.com/assets/img/Screenshot-5.png",
         text: "A portfolio website for the deputy creative director at Insight Publics Nigeria"
     },
     {
         id: 5,
         title: "Abifola Olorunlana",
-        img: "https://www.imohcodes.com/assets/img/glintz.png",
+        img: "https://www.imohcodes.com/assets/img/Screenshot-6.png",
         text: "An artist"
     },
 ];
