@@ -1,5 +1,4 @@
 import { useContext,  } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/Navbar.css"
 import { ThemeContext } from '../context/context'
 
@@ -12,7 +11,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
+            {/* <nav className="navbar navbar-expand-lg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container">
                     <a className="navbar-brand" href={url} style={{color: darkMode ? "#000" :"#fff"}}>Mouri</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +37,30 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
+                </div>
+                </nav> */}
+
+
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand" href={url}>Navbar w/ text</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarText">
+                    <ul className="navbar-nav mr-auto">
+                    <li className="nav-item active">
+                        <a className="nav-link" href={url}>Home <span className="sr-only">(current)</span></a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href={url}>Features</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href={url}>Pricing</a>
+                    </li>
+                    </ul>
+                    <span className="navbar-text">
+                    Navbar text with an inline element
+                    </span>
                 </div>
                 </nav>
 

@@ -62,7 +62,7 @@ const Body = () => {
     return (
         <>
              {/* ======= Portfolio Section ======= */}
-             <Toggle />
+             {/* <Toggle /> */}
             <section id="portfolio" className="portfolio section-bg" style={{background: darkMode ? "#fff" :"#1e1f1f"}}>
                 <div className="container" data-aos="fade-up">
 
