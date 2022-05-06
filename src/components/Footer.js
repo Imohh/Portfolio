@@ -20,7 +20,7 @@ class Footer extends React.Component {
                             </div>
     
                             <div className="col-lg-2 right">
-                                <button>instagram</button>
+                                <button onClick="">instagram</button>
                             </div>
                         </div>
                     </div>
